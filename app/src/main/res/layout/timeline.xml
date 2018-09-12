@@ -1,40 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/timelineView">
+    android:id="@+id/timelineView"
+    android:weightSum="1">
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_media_play"
-            android:id="@+id/imageButton"
-            android:layout_weight="1" />
-        <HorizontalScrollView
-            android:layout_width="421dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.58">
-            <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
-                    app:srcCompat="@android:drawable/ic_menu_add" android:id="@+id/imageButton2"
-                    android:layout_weight="1" />
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/ic_media_play"
+                android:id="@+id/imageButton"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"/>
+        <com.example.emsdesigntool.LockableScrollView
+                android:layout_width="421dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.58"
+                android:fillViewport="true">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        >
+
+                    <Button
+                            android:text="time in sec"
+                            android:layout_width="400px"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/button10"
+                            android:background="@drawable/button_invisible"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="200px">
+                    <ImageButton
+                            android:layout_height="200px"
+                            app:srcCompat="@android:drawable/ic_menu_add"
+                            android:id="@+id/imageButton2"
+                            android:onClick="createNewElement"
+                            android:layout_width="200px"
+                            android:background="@android:drawable/btn_default"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="100px"
+                        android:showDividers="middle">
+                    <Button
+                            android:text="Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="10px"
+                            android:id="@+id/button5"
+                            android:layout_weight="1"
+                            android:visibility="invisible"/>
+                </LinearLayout>
             </LinearLayout>
-        </HorizontalScrollView>
+        </com.example.emsdesigntool.LockableScrollView>
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@android:drawable/ic_menu_manage"
-            android:id="@+id/imageButton3"
-            android:layout_weight="1" />
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@android:drawable/ic_menu_manage"
+                android:id="@+id/imageButton3"
+                android:layout_weight="1"
+                android:background="@android:drawable/btn_default"/>
+        <TextView
+                android:text="0,99"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView" android:layout_weight="1"/>
     </LinearLayout>
 </LinearLayout>

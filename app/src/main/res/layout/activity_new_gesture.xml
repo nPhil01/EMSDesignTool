@@ -3,26 +3,93 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="com.example.emsdesigntool.NewGestureActivity">
 
-    <ScrollView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:id="@+id/frameNewGesture">
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/ll_timeline">
-            <Button
-                android:text="+"
-                android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/button4"
-                android:onClick="prepareTimeline" />
-            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
-                android:layout_height="match_parent" android:id="@+id/inputTimelineName"></LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+                android:id="@+id/ll_timeline">
+                <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@android:drawable/ic_media_play"
+                        android:id="@+id/imageButton4"
+                        android:onClick="playAll"
+                        android:background="@android:drawable/btn_default"/>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <Button
+                            android:text="Scroll left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonScrollLeft1"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/btn_default"/>
+                    <Button
+                            android:text="Scroll right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonScrollRight1"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/btn_default"/>
+                </LinearLayout>
+                <Button
+                        android:text="Add muscle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/button4"
+                        android:onClick="prepareTimeline"
+                        android:clickable="true"
+                        android:background="@android:drawable/btn_default"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/inputTimelineName">
+
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <Button
+                            android:text="Scroll left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonScrollLeft2"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/btn_default"/>
+                    <Button
+                            android:text="Scroll right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/buttonScrollRight2"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/btn_default"/>
+                </LinearLayout>
+                <Button
+                        android:text="Save project"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/saveButton"
+                        android:onClick="saveProject"
+                        android:background="@android:drawable/btn_default"/>
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
 </android.support.design.widget.CoordinatorLayout>

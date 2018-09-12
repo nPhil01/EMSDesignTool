@@ -93,6 +93,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_load_gesture">Load a gesture</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_gesture">Gesture</string>
 
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
